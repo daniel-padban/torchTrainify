@@ -1,2 +1,5 @@
 torchTrainer-venv
 __pycache__/
+*.gz
+*-ubyte
+*.egg-info

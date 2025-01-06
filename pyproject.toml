@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "torchTrainify"
+version = "0.2.0"
+description = "A package to simplify the training and testing of PyTorch models"
+authors = [
+    { name = "Daniel Padban", email = "danielpadban@gmail.com" }
+]
+license = { text = "MIT" }
+keywords = ["pytorch", "training", "testing"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [ 
+    "filelock",
+    "fsspec",
+    "Jinja2",
+    "MarkupSafe",
+    "mpmath",
+    "networkx",
+    "numpy",
+    "setuptools",
+    "sympy",
+    "torch",
+    "tqdm",
+    "typing_extensions"
+]
+[project.urls]
+Github = "https://github.com/daniel-padban/torchTrainer"
+
+[project.optional-dependencies]
+dev = ["torchvision", "torcheval"]
+
+[tool.setuptools.packages.find]
+where = ["torchTrainify"]
+
+[tool.long-description]
+file = "README.md"
+content-type = "text/markdown"
+
+[tool.python_requires]
+python = ">=3.6"
